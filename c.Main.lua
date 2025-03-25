@@ -8,14 +8,15 @@ Citizen.CreateThread(function()
         Wait(1000);
         local Vehicles = GetGamePool("CVehicle")
 
-        for _,v in pairs(Vehicles) do
+        for _, v in pairs(Vehicles) do
             Wait(1)
-		if DoesEntityExist(v) then
-			if GetVehicleClass(v) == 15 then
-				SetVehicleGravityAmount(v, heliGravity)
-			else
-				SetVehicleGravityAmount(v, Gravity)
-			end
+            if DoesEntityExist(v) then
+                if GetVehicleClass(v) == 15 then
+                    SetVehicleGravityAmount(v, heliGravity)
+                else
+                    SetVehicleGravityAmount(v, Gravity)
+                end
+            end
         end
     end
 end)
